@@ -7,12 +7,17 @@
 body {
   font: 1em helvetica, arial, sans-serif;
   background-color: #fff;
-  color: #111;
+  color: #222;
+  margin-right: 3rem;
+  margin-left: 0;
+  line-height: 1.5rem;
 }
 
 h1{
+  font-size: 1.5rem;
   margin: 0;
   padding: 1rem 0;
+  margin-left: 1rem;
 }
 
 .story {
@@ -31,15 +36,19 @@ h1{
 }
 
 .article-title-header{
-  position: sticky;
+  position: fixed;
+  display: block;
   top: 0;
+  width: 100%;
   background-color: #fff;
 }
 
 #progress-bar{
+  z-index: 2;
+  position: fixed;
   display: block;
   width: 0%;
-  height: .2rem;
+  height: .4rem;
   color: rgba(255, 255, 255, 0);
   background: var(--primary-dark-color);
   background: var(--bg-primary-gradient);
@@ -61,6 +70,16 @@ h1{
   top:5rem;
 }
 
+#nav-summary ul li{
+ margin: .75rem 0;
+}
+
+#nav-summary ul li a{
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+ }
+
 .article-body{
   display: inline-block;
   width: auto;
@@ -68,25 +87,26 @@ h1{
 }
 
 .article-body section:first-child {
-  padding-top: 0rem;
+  /* padding-top: 3rem; */
 }
 
 .article-body section {
-  padding-top: 5rem;
+  padding-top: 2.5rem;
 }
 
-.marked-summary{
-  background-color: pink;
+#nav-summary-list{
+
 }
 
 .mark-line {
-  margin: 0 .5rem;
+  margin-right: .3rem;
   display: inline-block;
   height: 0.2rem;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(126, 126, 126);
   border-radius: 5rem;
   width: 2rem;
   transition: all .2s ease-in-out;
+  vertical-align: middle;
 }
 
 .marked-summary .mark-line {
@@ -98,5 +118,38 @@ h1{
 
 .next-article{
   text-align: right;
+}
+
+.next-article button {
+  border: none;
+  background-color: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#cancel-button{
+  padding: .5rem .35rem;
+  border-radius: .25rem;
+  display: inline-block;
+  background-color: #FF3547;
+  color: white;
+}
+
+#cancel-button:hover{
+  cursor: pointer;
+  background-color: #97151C;
+}
+
+
+#next-article-title a{
+  color: #444;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#next-article-title a:hover{
+  color: #222;
+  font-size: 2rem;
+  font-weight: bold;
 }
 

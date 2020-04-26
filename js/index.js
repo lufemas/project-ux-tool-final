@@ -20,17 +20,13 @@ const summaryList = [] // Create an array for the Summary List
 
 const articleDataBase = [ // Creates a database of articles available
     {
-        title: "Article 2", 
+        title: "Binary Search Tree", 
         url: "./article-2.html"
     },
     {
-        title: "Article 3", 
+        title: "Boids: An artificial life program", 
         url: "./article-3.html"
     },
-    {
-        title: "Article 4", 
-        url: "./article-4.html"
-    }, 
     {
     title: "Javascript and the UI", 
     url: "index.html"
@@ -39,7 +35,7 @@ const articleDataBase = [ // Creates a database of articles available
 
 
 function  pickAnArticle () { // Generates a randomic ID for the articles within the Array
-    const ramdomArticleIndex = Math.floor(Math.random () * 4); //Randomizing the ID
+    const ramdomArticleIndex = Math.floor(Math.random () * 3); //Randomizing the ID
     // console.log(ramdomArticleIndex);
     if (articleDataBase[ramdomArticleIndex].title === $articleTitle.innerText ) { // Comparing the random ID with the current Article
         return pickAnArticle () // If the ID generared is equal to the current Article, generates another random ID
@@ -68,7 +64,8 @@ function stopNextArticleTimer () {
 $cancelButton.addEventListener(`click`, () => {
     stopNextArticleTimer();
     cancelNextArticleTimer = true;
-    $cancelButton.style.opacity = 0;
+    // $cancelButton.style.opacity = 0;
+    $cancelButton.parentElement.style.display = "none";
     $cancelButton.style.visibility = false;
 })
 
