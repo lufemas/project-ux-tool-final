@@ -3,22 +3,23 @@
   --primary-light-color: rgba(48,206,207,1);
   --bg-primary-gradient: linear-gradient(90deg, var(--primary-dark-color) 0%, var(--primary-light-color) 100%)
 }
-
 body {
   font: 1em helvetica, arial, sans-serif;
   background-color: #fff;
   color: #111;
+  margin-right: 3rem;
+  margin-left: 0;
 }
-
 h1{
+  font-size: 1.5rem;
   margin: 0;
   padding: 1rem 0;
+  margin-left: 1rem;
 }
 
 .story {
   padding: 0 0;
 }
-
 #line {  
   display: inline-block;  
   width: 10%;
@@ -27,38 +28,48 @@ h1{
   height: .2rem;  
   color: rgba(255, 255, 255, 0);
   background-color: #ccc;
-  
 }
-
 .article-title-header{
-  position: sticky;
+  position: fixed;
+  display: block;
   top: 0;
+  width: 100%;
   background-color: #fff;
 }
-
 #progress-bar{
+  z-index: 2;
+  position: fixed;
   display: block;
   width: 0%;
-  height: .2rem;
+  height: .4rem;
   color: rgba(255, 255, 255, 0);
   background: var(--primary-dark-color);
   background: var(--bg-primary-gradient);
 }
-
 .content {
   display: flex;
   /* background-color: pink; */
 }
-
 #nav-summary {
   /* background-color: red; */
   display: inline-block;
   width: 50%;
 }
-
 #nav-summary ul{
   position: sticky;
   top:5rem;
+}
+
+#nav-summary ul li{
+  position: sticky;
+  top:5rem;
+  margin-bottom: 0.3rem;
+}
+
+#nav-summary ul li a{
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .article-body{
@@ -67,26 +78,22 @@ h1{
   /* background-color: cyan; */
 }
 
-.article-body section:first-child {
-  padding-top: 0rem;
-}
-
 .article-body section {
-  padding-top: 5rem;
+  padding-top: 2.5rem;
 }
 
-.marked-summary{
-  background-color: pink;
-}
+
 
 .mark-line {
-  margin: 0 .5rem;
+  margin: 0;
   display: inline-block;
   height: 0.2rem;
-  background-color: rgb(59, 59, 59);
+  background-color: #c1c1c1;
   border-radius: 5rem;
   width: 2rem;
   transition: all .2s ease-in-out;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .marked-summary .mark-line {
@@ -95,8 +102,6 @@ h1{
   transition: all .2s ease-in-out;
   width: 4rem;
 }
-
 .next-article{
   text-align: right;
 }
-
