@@ -67,6 +67,14 @@ h1{
   /* background-color: cyan; */
 }
 
+.article-body section:first-child {
+  padding-top: 0rem;
+}
+
+.article-body section {
+  padding-top: 5rem;
+}
+
 .marked-summary{
   background-color: pink;
 }
