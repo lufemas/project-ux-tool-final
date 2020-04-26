@@ -69,7 +69,7 @@ $cancelButton.addEventListener(`click`, () => {
     stopNextArticleTimer();
     cancelNextArticleTimer = true;
     $cancelButton.style.opacity = 0;
-    $cancelButton.style.visibility = false;
+    $cancelButton.style.visibility = false;             
 })
 
 function eraseAllChildrenClasses ($element) {
