@@ -20,7 +20,7 @@ const summaryList = [] // Create an array for the Summary List
 
 const articleDataBase = [ // Creates a database of articles available
     {
-        title: "Article 2", 
+        title: "Binary Search Tree", 
         url: "./article-2.html"
     },
     {
@@ -68,7 +68,8 @@ function stopNextArticleTimer () {
 $cancelButton.addEventListener(`click`, () => {
     stopNextArticleTimer();
     cancelNextArticleTimer = true;
-    $cancelButton.style.opacity = 0;
+    // $cancelButton.style.opacity = 0;
+    $cancelButton.parentElement.style.display = `none`;
     $cancelButton.style.visibility = false;             
 })
 
@@ -124,3 +125,33 @@ window.addEventListener(`scroll`, () => { // Event listener Scrolling page
 pickAnArticle()
 
 $nextArticleTitle.innerHTML = `<a href="${nextArticle.url}"> ${nextArticle.title} -> </a>`;
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
