@@ -3,7 +3,6 @@
   --primary-light-color: rgba(48,206,207,1);
   --bg-primary-gradient: linear-gradient(90deg, var(--primary-dark-color) 0%, var(--primary-light-color) 100%)
 }
-
 body {
   font: 1em helvetica, arial, sans-serif;
   background-color: #fff;
@@ -23,7 +22,6 @@ h1{
 .story {
   padding: 0 0;
 }
-
 #line {  
   display: inline-block;  
   width: 10%;
@@ -32,9 +30,7 @@ h1{
   height: .2rem;  
   color: rgba(255, 255, 255, 0);
   background-color: #ccc;
-  
 }
-
 .article-title-header{
   position: fixed;
   display: block;
@@ -42,7 +38,6 @@ h1{
   width: 100%;
   background-color: #fff;
 }
-
 #progress-bar{
   z-index: 2;
   position: fixed;
@@ -53,32 +48,33 @@ h1{
   background: var(--primary-dark-color);
   background: var(--bg-primary-gradient);
 }
-
 .content {
   display: flex;
   /* background-color: pink; */
 }
-
 #nav-summary {
   /* background-color: red; */
   display: inline-block;
   width: 50%;
 }
-
 #nav-summary ul{
   position: sticky;
   top:5rem;
 }
 
 #nav-summary ul li{
+
  margin: .75rem 0;
+
 }
 
 #nav-summary ul li a{
   color: inherit;
   font-weight: bold;
   text-decoration: none;
- }
+
+}
+
 
 .article-body{
   display: inline-block;
@@ -86,13 +82,16 @@ h1{
   /* background-color: cyan; */
 }
 
+
 .article-body section:first-child {
   /* padding-top: 3rem; */
 }
 
+
 .article-body section {
   padding-top: 2.5rem;
 }
+
 
 #nav-summary-list{
 
@@ -103,10 +102,12 @@ h1{
   display: inline-block;
   height: 0.2rem;
   background-color: rgb(126, 126, 126);
+
   border-radius: 5rem;
   width: 2rem;
   transition: all .2s ease-in-out;
   vertical-align: middle;
+
 }
 
 .marked-summary .mark-line {
@@ -115,7 +116,6 @@ h1{
   transition: all .2s ease-in-out;
   width: 4rem;
 }
-
 .next-article{
   text-align: right;
 }

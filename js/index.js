@@ -67,6 +67,7 @@ $cancelButton.addEventListener(`click`, () => {
     // $cancelButton.style.opacity = 0;
     $cancelButton.parentElement.style.display = "none";
     $cancelButton.style.visibility = false;
+
 })
 
 function eraseAllChildrenClasses ($element) {
